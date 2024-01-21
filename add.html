@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>*Add Page*</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <section id="all">
+      <section id="add">
+        <form action="form" id="form">
+          <input type="file" id="img" />
+          <p>*Please Fill Out File:</p>
+
+          <label for="Name">Name:</label>
+          <input type="name" id="name" />
+          <p>*Please Fill Out Name:</p>
+
+          <label for="description">Description:</label>
+          <input type="description" id="description" />
+          <p>*Please Fill Out Name:</p>
+
+          <label for="Name">Cost:</label>
+          <input type="cost" id="cost" />
+          <p>*Please Fill Out Name:</p>
+
+          <input type="submit" />
+        </form>
+      </section>
+
+      <table id="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Cost</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="./assets/js/add.js"></script>
+  </body>
+</html>

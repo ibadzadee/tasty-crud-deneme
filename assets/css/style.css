@@ -1,0 +1,158 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  width: 100%;
+  background-color: #fafafa;
+}
+
+.search-sort {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.search-sort input {
+  padding: 10px;
+}
+.search-sort input, .search-sort select {
+  width: 250px;
+  height: 50px;
+  margin-top: 100px;
+  font-size: 19px;
+  text-transform: capitalize;
+}
+
+#menu {
+  width: 100%;
+  padding: 100px 200px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(2, auto);
+  gap: 60px;
+  margin: 0 auto;
+}
+#menu .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 2px gray;
+  padding: 20px;
+  background-color: white;
+}
+#menu .cards:hover {
+  background-color: #ffb400;
+  transition: all 0.5s ease;
+}
+#menu .cards .img {
+  width: 100px;
+  height: 80px;
+  border-radius: 9999px;
+}
+#menu .cards .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 9999px;
+}
+#menu .cards .text {
+  margin-left: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#menu .cards .text h4 {
+  font-size: 20px;
+}
+#menu .cards .text p {
+  margin-top: 20px;
+  letter-spacing: 0.1em;
+  color: gray;
+}
+#menu .cards .text h3 {
+  font-size: 30px;
+  letter-spacing: 0.1em;
+  color: rgb(39, 37, 37);
+}
+
+#all {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/dish-9.jpg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 100px;
+}
+
+#add {
+  width: 100%;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#add #form {
+  box-shadow: 0 0 10px 1px snow;
+  background-color: rgba(255, 250, 250, 0.7);
+  -webkit-backdrop-filter: blur(3.5px);
+          backdrop-filter: blur(3.5px);
+  padding: 60px 100px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#add #form input {
+  padding: 10px 20px;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+#add #form label {
+  margin-top: 20px;
+  font-size: 19px;
+}
+#add #form p {
+  color: red;
+  display: none;
+}
+#add #form input[type=submit] {
+  margin-top: 20px;
+  margin-left: 120px;
+  margin-right: 120px;
+  border-radius: 9999px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: darkgreen;
+  border: none;
+  color: white;
+}
+#add #form input[type=submit]:hover {
+  opacity: 0.8;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+#table {
+  width: 85%;
+  margin: 0 auto;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 0 10px 1px white;
+  -webkit-backdrop-filter: blur(3.5px);
+          backdrop-filter: blur(3.5px);
+  background: rgba(30, 29, 29, 0.6);
+}
+#table td, #table th {
+  border: 1px solid white;
+  border-radius: 9999px;
+  margin: 0 auto;
+  padding: 5px 10px;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
