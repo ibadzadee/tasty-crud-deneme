@@ -65,6 +65,7 @@ function details(id) {
   modal.style.display = "block";
   modalSection.style.position = "absolute";
   modalSection.style.zIndex = "10";
+
   axios.get(`http://localhost:3000/data?id=${id}`).then((res) => {
     let element = res.data[0];
     console.log(element.id);
@@ -85,6 +86,7 @@ function details(id) {
     `;
   });
 }
+
 function closeModal() {
   modal.style.display = "none";
 //   // modalSection.innerHTML = ""; // Clear the content inside modalSection
