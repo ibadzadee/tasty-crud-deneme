@@ -16,7 +16,7 @@ async function GetAll(){
 
     filterArr.forEach(element => {
         section.innerHTML+= `
-        <div class="cards">
+        <div class="cards" onclick = details(${element.id})>
         <div class="img">
           <img src="${element.image}" alt="" />
         </div>
@@ -55,3 +55,41 @@ sort.addEventListener("change" , (e)=>{
     };
     GetAll();
 })
+
+
+// details
+let modal = document.querySelector("#modal");
+let modalSection = document.querySelector("#menu");
+
+function details(id) {
+  modal.style.display = "block";
+  modalSection.style.position = "absolute";
+  modalSection.style.zIndex = "10";
+  axios.get(`http://localhost:3000/data?id=${id}`).then((res) => {
+    let element = res.data[0];
+    console.log(element.id);
+    modalSection.innerHTML = `
+      <div class="cards">
+        <div class="img">
+          <img src="${element.image}" alt="" />
+        </div>
+        <div class="text">
+          <div class="left">
+            <h4>${element.name}</h4>
+            <p>${element.description}</p>
+          </div>
+          <h3>$${element.cost}</h3>
+        </div>
+      </div>
+      <button onclick="closeModal()">Close</button>
+    `;
+  });
+}
+function closeModal() {
+  modal.style.display = "none";
+//   // modalSection.innerHTML = ""; // Clear the content inside modalSection
+  GetAll();
+}
+
+
+

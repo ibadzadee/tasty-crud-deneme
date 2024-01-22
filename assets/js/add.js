@@ -39,27 +39,28 @@ form.addEventListener("submit", (event) => {
 // Table Crud
 const table = document.querySelector("#table tbody");
 
-fetch(url).then(res=>res.json())
-.then(data =>{
-    data.forEach(element =>{
-        table.innerHTML+=`
-        <tr>
+fetch(url)
+  .then((res) => res.json())
+  .then((data) => {
+    data  .forEach((element) => {
+      table.innerHTML += `
+      <tr>
         <td>${element.id}</td>
         <td>${element.name}</td>
         <td>${element.description}</td>
         <td>${element.cost}</td>
-        <td><button onclick =deleteData((${element.id}))>Delete</button></td>
+        <td><button onclick =deleteData((${element.id}))>Delete</button>
+        </td>
+        <td><button onclick="updateData(${element.id})">Update</button></td>
       </tr>
-        `
-    })
-})
+        `;
+    });
+  });
 
-function deleteData(id){
-    axios.delete(url+id)
-    .then(res=>{
-        alert("The Data was Successfully Deleted!");
-        window.location.reload();
-    }
-    )
-    
+function deleteData(id) {
+  axios.delete(url + id).then((res) => {
+    alert("The Data was Successfully Deleted!");
+    window.location.reload();
+  });
 }
+
