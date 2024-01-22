@@ -64,3 +64,7 @@ function deleteData(id) {
   });
 }
 
+function updateData(id){
+  window.location = `./update.html?id=${id}`
+}
+
