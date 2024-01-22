@@ -29,7 +29,7 @@ body {
   text-transform: capitalize;
 }
 
-#menu {
+.menu {
   width: 100%;
   padding: 100px 200px;
   display: grid;
@@ -39,7 +39,7 @@ body {
   gap: 60px;
   margin: 0 auto;
 }
-#menu .cards {
+.menu .cards {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,37 +47,37 @@ body {
   padding: 20px;
   background-color: white;
 }
-#menu .cards:hover {
+.menu .cards:hover {
   background-color: #ffb400;
   transition: all 0.5s ease;
 }
-#menu .cards .img {
+.menu .cards .img {
   width: 100px;
   height: 80px;
   border-radius: 9999px;
 }
-#menu .cards .img img {
+.menu .cards .img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 9999px;
 }
-#menu .cards .text {
+.menu .cards .text {
   margin-left: 20px;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-#menu .cards .text h4 {
+.menu .cards .text h4 {
   font-size: 20px;
 }
-#menu .cards .text p {
+.menu .cards .text p {
   margin-top: 20px;
   letter-spacing: 0.1em;
   color: gray;
 }
-#menu .cards .text h3 {
+.menu .cards .text h3 {
   font-size: 30px;
   letter-spacing: 0.1em;
   color: rgb(39, 37, 37);

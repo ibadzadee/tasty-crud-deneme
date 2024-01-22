@@ -59,7 +59,7 @@ sort.addEventListener("change" , (e)=>{
 
 // details
 let modal = document.querySelector("#modal");
-let modalSection = document.querySelector("#menu");
+let modalSection = document.querySelector("#modalMenu");
 
 function details(id) {
   modal.style.display = "block";
@@ -67,6 +67,7 @@ function details(id) {
   modalSection.style.zIndex = "10";
 
   axios.get(`http://localhost:3000/data?id=${id}`).then((res) => {
+    console.log(res.data);
     let element = res.data[0];
     console.log(element.id);
     modalSection.innerHTML = `
@@ -89,8 +90,8 @@ function details(id) {
 
 function closeModal() {
   modal.style.display = "none";
-//   // modalSection.innerHTML = ""; // Clear the content inside modalSection
-  GetAll();
+  // modalSection.innerHTML = ""; // Clear the content inside modalSection
+  // GetAll();
 }
 
 
